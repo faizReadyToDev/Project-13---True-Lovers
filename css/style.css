@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+
+ul li{
+    list-style: none;
+    margin: 0 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+ul li:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.logo img{
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    margin: 0 15px;
+    margin-top: 5px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav{
+    width: 65vw;
+    margin: auto;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #ffc0cb;
+    color: rgb(2, 2, 2);
+}
+hr{
+    width: 72vw;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+section{
+    justify-content: space-evenly;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+}
+.left{
+    width: 35vw;
+    border: 1px solid rgb(234, 210, 218);
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    color: white;
+    height: 70vh;
+}
+.caption{
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+.caption h1{
+    background-color: #000000;
+    /* border: #bcbaba 1px solid; */
+    font-size: 18px;
+    cursor: pointer;
+    /* background-color: #bd2841; */
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 10px;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.caption::after,.caption::before{
+    content: '';
+    padding: 3px;
+    background-image: conic-gradient( from var(--angle),rgb(225, 0, 0),rgb(0, 36, 61),rgb(0, 0, 255),rgb(0, 74, 0),rgb(130, 0, 130),rgb(255, 0, 0));
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    border-radius: 5px;
+    animation: 3s spin linear infinite;
+}
+.bg{
+    position: relative;
+    z-index: 2;
+}
+.bg::after,bg::before{
+    content: '';
+    padding: 3px;
+    background-image: conic-gradient( from var(--angle),transparent 60%,rgb(9, 2, 41),rgb(255, 0, 247),red);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -2;
+    border-radius: 5px;
+    animation: 2s spin linear infinite;
+}
+
+.caption::before{
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+.bg::before{
+    filter: blur(2rem);
+    opacity: 0.7;
+}
+
+@keyframes spin{
+    from
+    {
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.right{
+    /* border: 1px solid rgb(234, 210, 218); */
+    width: 35vw;
+    height: 70vh;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+.left img{
+    width: 163px;
+    height: 260px;
+    
+}
+.right img{
+    width: 180px;
+    height: 300px;
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+}
+.right-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: none; */
+}
+.right h1{
+    position: relative;
+    right: -65px;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin-left: 65px;
+    margin-top: 50px;
+    color: #e8052b;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+.btn button{
+    width: 80px;
+    height: 30px;
+    border: 1px solid rgb(187, 185, 185);
+    border-radius: 5px;
+    background-color: #ffc0cb;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    bottom: 20px;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.btn button:hover{
+    background-color: #dd93a0;
+}
+.btn{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    bottom: 203px;
+}
+.btn1{
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid white;
+}
+
+.btn1:hover{
+    background-color: #434141;
+}
+
+.SoulmateHead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(190, 46, 46, 0.455);
+    border-radius: 5px;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.soulHead{
+    font-size: 30px;
+    font-weight: 700;
+    color: #e8052b;
+    text-align: center;
+    border: rgb(0, 0, 0) 1px solid;
+    padding: 2px 15px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tagline{
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e8052b;
+    text-align: center;
+}
+
+.inputSoulmate input{
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 5px 40px;
+    background-color: #ee8fa1fe;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10px;
+}
+.inputSoulmate input:hover{
+    background-color: #e8052b;
+}
+
+.inputSoulmate input::placeholder {
+    color: #ffffff; 
+    font-size: 14px;
+}
+
+.exam{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center
+}
+.soulmateBtn{
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #e8052b;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: rgba(3, 3, 3, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.soulmateBtn:hover{
+   background-color: #ee7589;
+}
+
+.containerFND {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 15px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(8px); /* Blurred background */
+    position: relative;
+    display: none;
+}
+
+.soulmates-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+    color: #ff6f91;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 8px rgb(241 0 53 / 40%);
+    background: linear-gradient(135deg, #000000, #4b373b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heart-icon {
+    font-size: 40px;
+    color: #ff6f91;
+    animation: float 3s infinite ease-in-out; /* Floating animation */
+    margin: 0 5px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.subtext {
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.containerFND::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(135deg, #ffb3c6, #ff6f91); /* Outer glowing border */
+    z-index: -1;
+    border-radius: 30px;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.copyright p{
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+
+}
+.copyright{
+    display: flex;
+    width: 65vw;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 10px
+
+}
+.navinput{
+    color: #060606;
+    padding: 2px 20px;
+    background-color: #fffffffe;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.navinput::placeholder {
+    align-items: center;
+    color: #5c5151; 
+    font-size: 14px;
+}
+
+.congrats{
+    z-index: 2;
+    background-color: #0d0d0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 70vh; 
+    margin: auto;
+    display: none;
+}
+.congrats video{
+    display: none;
+    width: 80%;
+    z-index: 2;
+}
+
+.MarriageBtn{
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #ed2a4a;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: rgb(255 242 242 / 40%) 0px 2px 4px, rgb(255 255 255 / 30%) 0px 7px 13px -3px, rgb(246 246 246 / 20%) 0px -3px 0px inset;
+}
+.MarriageBtn:hover{
+    background-color: #940019;
+}
+.tryAgain{
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #e8052b;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: rgba(3, 3, 3, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: none;
+}
